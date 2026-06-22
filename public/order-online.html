@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Online | Lakshmi Tailors</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandGreen: '#123524',    /* Deep luxurious tailoring green */
+            brandYellow: '#EFE3C3',   /* Premium vintage cream accent */
+            brandRed: '#3E1B1B',      /* Crimson secondary tone */
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+    body { font-family: 'Montserrat', sans-serif; }
+
+    /* 🧵 PREMIUM SARTORIAL ACTIVE KEYFRAMES 🧵 */
+    
+    /* 1. Golden Needle Gliding & Bobbing */
+    @keyframes needleGlide {
+      0%, 100% { transform: translateY(0) rotate(-15deg); }
+      50% { transform: translateY(-12px) rotate(-10deg); }
+    }
+    .animate-needle {
+      animation: needleGlide 3s ease-in-out infinite;
+    }
+
+    /* 2. Thread Pulse Wave */
+    @keyframes threadWave {
+      0%, 100% { stroke-dashoffset: 0; opacity: 0.8; }
+      50% { stroke-dashoffset: 40; opacity: 0.4; }
+    }
+    .animate-thread {
+      stroke-dasharray: 20, 10;
+      animation: threadWave 4s linear infinite;
+    }
+
+    /* 3. Floating Scissors Silhouette */
+    @keyframes scissorFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(5deg); }
+    }
+    .animate-scissor-float {
+      animation: scissorFloat 4s ease-in-out infinite;
+    }
+
+    /* 4. Measuring Tape Endless Tick Bar */
+    @keyframes tapeScroll {
+      from { background-position: 0 0; }
+      to { background-position: 40px 0; }
+    }
+    .measuring-tape-loader {
+      background: linear-gradient(90deg, #EFE3C3 50%, #123524 50%);
+      background-size: 20px 100%;
+      position: relative;
+    }
+    .measuring-tape-loader::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(90deg, #123524, #123524 2px, transparent 2px, transparent 10px);
+      animation: tapeScroll 1.5s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <!-- 🌟 FIXED BRAND GREEN HEADER (Responsive Layout Fix) 🌟 -->
+  <header class="fixed top-0 w-full z-50 bg-[#123524] backdrop-blur-md shadow-lg border-b border-green-800/50 h-28 flex items-center">
+    <div class="max-w-[1600px] mx-auto px-4 sm:px-6 w-full flex justify-between items-center gap-4">
+      
+      <!-- Brand Identity Logo Layout -->
+      <a href="/" class="flex items-center gap-3 cursor-pointer group flex-shrink-0">
+        <img src="/logo.png" alt="Main Logo" class="h-14 md:h-16 w-auto filter drop-shadow-[0_0_2px_#fff]" />
+        <span class="text-white font-black text-lg tracking-tighter hidden lg:block uppercase transition group-hover:text-brandYellow">
+          LAKSHMI TAILORS
+        </span>
+      </a>
+
+      <!-- Quick Back Navigation (Responsive Content Fix for Mobile Viewports) -->
+      <a href="/" class="inline-flex items-center gap-1.5 bg-white/10 px-4 sm:px-5 py-2.5 rounded-2xl border border-white/20 shadow-xl backdrop-blur-sm text-xs sm:text-sm text-brandYellow font-black tracking-widest uppercase hover:bg-white/20 transition flex-shrink-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span class="hidden sm:inline">Home Atelier</span>
+        <span class="sm:hidden">Home</span>
+      </a>
+
+    </div>
+  </header>
+
+  <!-- BACKGROUND DESIGNER PULSES -->
+  <div class="absolute top-28 left-10 w-[30rem] h-[30rem] bg-brandYellow/10 rounded-full mix-blend-multiply filter blur-[100px] pointer-events-none"></div>
+  <div class="absolute bottom-10 right-10 w-[30rem] h-[30rem] bg-brandRed/5 rounded-full mix-blend-multiply filter blur-[100px] pointer-events-none"></div>
+
+  <!-- MAIN ANIMATION MAIN CONTAINER WINDOW -->
+  <main class="w-full max-w-4xl mx-auto px-4 pt-44 pb-16 flex-grow flex flex-col items-center justify-center text-center relative z-10">
+    
+    <!-- 🧵 BRAND THEMED ANIMATION CANVAS -->
+    <div class="w-72 h-56 relative flex items-center justify-center mb-8 bg-[#123524]/5 rounded-[2rem] border border-[#123524]/10 shadow-inner backdrop-blur-sm">
+      
+      <!-- Vector Thread Path -->
+      <svg class="absolute w-full h-full" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 100 C 90 40, 130 160, 210 60 C 250 20, 260 80, 270 110" stroke="#EFE3C3" stroke-width="3.5" stroke-linecap="round" class="animate-thread" />
+      </svg>
+
+      <!-- Golden Needle Overlay Animation -->
+      <div class="absolute animate-needle left-[155px] top-[42px] pointer-events-none drop-shadow-[0_10px_15px_rgba(0,0,0,0.3)]">
+        <svg width="45" height="130" viewBox="0 0 45 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.5 0C24 15 25 30 25 50V120L22.5 130L20 120V50C20 30 21 15 22.5 0Z" fill="url(#needleGrad)" />
+          <ellipse cx="22.5" cy="18" rx="2" ry="6" fill="#123524" />
+          <defs>
+            <linearGradient id="needleGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#FFF" />
+              <stop offset="60%" stop-color="#EFE3C3" />
+              <stop offset="100%" stop-color="#CBB682" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Floating Shears Silhouette Accent -->
+      <div class="absolute -left-2 bottom-4 text-brandGreen/10 animate-scissor-float pointer-events-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="9.8" y1="8.2" x2="22" y2="14"></line><line x1="9.8" y1="15.8" x2="22" y2="10"></line></svg>
+      </div>
+
+    </div>
+
+    <!-- HIGH TYPOGRAPHY BRAND CONTENT -->
+    <div class="space-y-6 max-w-2xl px-2">
+      <div>
+        <span class="bg-[#123524]/10 text-[#123524] px-6 py-2 rounded-full text-xs font-bold tracking-[0.3em] uppercase border border-[#123524]/20 shadow-xl backdrop-blur-sm inline-block">
+          Since 1982 Mastery
+        </span>
+      </div>
+      
+      <h1 class="text-4xl md:text-6xl font-black text-[#123524] leading-[1.1] drop-shadow-sm uppercase">
+        Drafting Your <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#123524] to-emerald-900">Digital Workspace</span>
+      </h1>
+      
+      <p class="text-gray-500 font-medium text-sm md:text-base leading-relaxed max-w-xl mx-auto">
+        Our digital order catalog is currently on the cutting table. Senior masters are fine-tuning dimensions to bring bespoke fabric configuration options straight to your screens.
+      </p>
+    </div>
+
+    <!-- MEASURING TAPE PROGRESS BLOCK -->
+    <div class="w-full max-w-md mt-12 bg-white p-6 rounded-[2rem] shadow-xl border border-gray-100">
+      <div class="w-full h-4 rounded-full overflow-hidden shadow-inner bg-gray-100 border border-brandGreen/10 relative">
+        <div class="h-full w-4/5 measuring-tape-loader rounded-full"></div>
+      </div>
+      <div class="flex justify-between items-center mt-4 text-[10px] font-black uppercase tracking-[0.15em] text-brandGreen/70 px-1">
+        <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-brandGreen animate-pulse"></span>Stitch 01 // Patterning</span>
+        <span class="text-brandGreen">Premium Fit 90% Done</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- 🌟 PREMIUM MULTI-COLUMN FOOTER 🌟 -->
+  <footer class="bg-gray-900 text-white py-16 border-t-[12px] border-brandGreen mt-auto">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      
+      <div class="mb-6 flex justify-center">
+        <a href="/"><img src="/logo.png" alt="Lakshmi Tailors" class="w-24 h-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500 cursor-pointer drop-shadow-md" /></a>
+      </div>
+
+      <h3 class="text-2xl md:text-3xl font-black mb-10 tracking-[0.2em] uppercase text-gray-300">Connect With Us On</h3>
+      
+      <div class="flex justify-center items-center flex-wrap gap-6 mb-16">
+        <a href="tel:+914222449943" class="p-5 bg-white/5 rounded-2xl text-gray-400 hover:bg-brandGreen hover:text-white hover:-translate-y-2 transition-all duration-500 group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </a>
+        <a href="mailto:lakshmitailorscbe@gmail.com" class="p-5 bg-white/5 rounded-2xl text-gray-400 hover:bg-brandRed hover:text-white hover:-translate-y-2 transition-all duration-500 group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+        <a href="https://wa.me/9655074488" target="_blank" rel="noopener noreferrer" class="p-5 bg-white/5 rounded-2xl text-gray-400 hover:bg-[#25D366] hover:text-white hover:-translate-y-2 transition-all duration-500 group">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"></path></svg>
+        </a>
+        <a href="https://instagram.com/lakshmi_tailors_official/" target="_blank" rel="noopener noreferrer" class="p-5 bg-white/5 rounded-2xl text-gray-400 hover:bg-[#E4405F] hover:text-white hover:-translate-y-2 transition-all duration-500 group">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="https://facebook.com/lakshmitailorsofficial/" target="_blank" rel="noopener noreferrer" class="p-5 bg-white/5 rounded-2xl text-gray-400 hover:bg-[#1877F2] hover:text-white hover:-translate-y-2 transition-all duration-500 group">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+      </div>
+
+      <p class="text-gray-500 text-sm font-bold tracking-widest opacity-60 uppercase">© 2026 LAKSHMI TAILORS | ALL RIGHTS RESERVED</p>
+    </div>
+  </footer>
+
+</body>
+</html>
