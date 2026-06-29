@@ -8,12 +8,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
   <loc>https://lakshmitailors.in/</loc>
   <lastmod>2026-06-24T19:29:07+00:00</lastmod>
+</url>
+<url>
+  <loc>https://lakshmitailors.in/order-online.html</loc>
 </url>
 
 </urlset>
