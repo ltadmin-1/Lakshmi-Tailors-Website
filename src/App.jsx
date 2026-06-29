@@ -70,21 +70,28 @@ const App = () => {
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 h-28">
           <div className="flex justify-between md:grid md:grid-cols-5 h-full items-center">
             
-            {/* COLUMN 1: LAKSHMI TAILORS LOGO */}
-            <motion.div 
-              initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} 
-              className="flex items-center gap-3 justify-start cursor-pointer group flex-shrink-0"
-              onClick={() => navigateTo('home')}
-            >
-              <img src="/logo.png" alt="Main Logo" className="h-14 md:h-16 w-auto filter drop-shadow-[0_0_2px_#fff]" />
-              <span className="text-white font-black text-lg tracking-tighter hidden lg:block uppercase leading-none group-hover:text-brandYellow transition">LAKSHMI TAILORS</span>
-            </motion.div>
+            {/* COLUMN 1: LAKSHMI TAILORS LOGO + MOBILE DETAILS */}
+            <div className="flex items-center gap-4">
+              <motion.div 
+                initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} 
+                className="flex items-center gap-3 justify-start cursor-pointer group flex-shrink-0"
+                onClick={() => navigateTo('home')}
+              >
+                <img src="/logo.png" alt="Main Logo" className="h-12 md:h-16 w-auto filter drop-shadow-[0_0_2px_#fff]" />
+                <span className="text-white font-black text-lg tracking-tighter hidden lg:block uppercase leading-none group-hover:text-brandYellow transition">LAKSHMI TAILORS</span>
+              </motion.div>
+
+              {/* 🌟 MOBILE-VISIBLE DETAILS (Shown on mobile, hidden on large screens) */}
+              <div className="flex flex-col md:hidden text-[9px] text-brandYellow font-bold uppercase leading-tight gap-0.5">
+                <span>India Wide Service</span>
+                <span>ISO 9001:2015</span>
+              </div>
+            </div>
 
             {/* COLUMN 2: DESKTOP NAVIGATION MENU */}
             <div className="hidden md:flex items-center justify-center gap-6 text-xs lg:text-sm font-black tracking-widest text-white">
               <button onClick={() => navigateTo('home')} className={`uppercase transition ${currentView === 'home' ? 'text-brandYellow border-b-2 border-brandYellow pb-1' : 'hover:text-brandYellow/80'}`}>Home</button>
               <button onClick={() => navigateTo('about')} className={`uppercase transition ${currentView === 'about' ? 'text-brandYellow border-b-2 border-brandYellow pb-1' : 'hover:text-brandYellow/80'}`}>About</button>
-              {/* 🔗 SEPARATE PAGE EXTERNAL REDIRECT */}
               <a href="/order-online.html" className="uppercase transition flex items-center gap-1.5 hover:text-brandYellow/80"><ShoppingBag size={16}/> Order Online</a>
             </div>
 
@@ -129,7 +136,6 @@ const App = () => {
                 {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
               </button>
             </div>
-
           </div>
         </div>
       </header>
@@ -158,20 +164,8 @@ const App = () => {
               <nav className="flex flex-col gap-4 text-lg font-bold text-white">
                 <button onClick={() => navigateTo('home')} className={`flex items-center gap-3 p-3 rounded-2xl transition text-left ${currentView === 'home' ? 'bg-brandYellow text-brandGreen font-black' : 'hover:bg-white/10'}`}>Home</button>
                 <button onClick={() => navigateTo('about')} className={`flex items-center gap-3 p-3 rounded-2xl transition text-left ${currentView === 'about' ? 'bg-brandYellow text-brandGreen font-black' : 'hover:bg-white/10'}`}>About Us</button>
-                {/* 🛒 ENABLED SEPARATE ORDER ONLINE ROUTE FOR MOBILE NAV VIEWS */}
                 <a href="/order-online.html" className="flex items-center gap-3 p-3 rounded-2xl transition text-left hover:bg-white/10"><ShoppingBag size={20}/> Order Online</a>
               </nav>
-
-              <div className="mt-auto space-y-4 pt-6 border-t border-white/10">
-                <div className="flex items-center gap-3 text-xs text-brandYellow font-bold">
-                  <Award size={16} />
-                  <span>ISO 9001:2015 CERTIFIED</span>
-                </div>
-                <div className="flex items-center gap-3 text-xs text-white opacity-80 font-bold">
-                  <MapPin size={16} />
-                  <span>INDIA WIDE DELIVERY</span>
-                </div>
-              </div>
             </motion.div>
           </>
         )}
@@ -209,7 +203,6 @@ const App = () => {
                   ))}
                 </div>
 
-                {/* ELITE CLIENTS */}
                 <div className="mt-20">
                   <h3 className="text-2xl font-bold text-gray-400 uppercase tracking-widest mb-10">Trusted By Our Elite Clients</h3>
                   <div className="flex flex-wrap justify-center items-center gap-12">
@@ -285,7 +278,6 @@ const App = () => {
             </div>
           </motion.section>
         )}
-
       </div>
 
       {/* 🌟 PREMIUM FOOTER 🌟 */}
